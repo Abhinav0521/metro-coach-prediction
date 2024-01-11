@@ -4,12 +4,14 @@ import cvzone
 import time
 import torch
 
+# author - abhinav
 # general definitions
 font = cv2.FONT_HERSHEY_SIMPLEX
 font_scale = 1.1
 font_thickness = 2
 
-print(torch.backends.mps.is_available())    # to check if the algo. is running on GPU or not
+# to check if the algo. is running on GPU or not
+print(torch.backends.mps.is_available())
 
 # select mode
 mode = input("Select the format: \n1. Webcam - type 'w'\n2. Video - type 'v'\n")
@@ -56,16 +58,19 @@ while True:  # capturing frames of video
                 count = count + 1
                 # for cvzone
                 w, h = x2 - x1, y2 - y1     # (width, height)
-                cvzone.cornerRect(img, (x1, y1, w, h))      # Building a corner rectangle
+                # Building a corner rectangle
+                cvzone.cornerRect(img, (x1, y1, w, h))
                 # box heading tag
                 cvzone.putTextRect(img, f"{classNames[cls]} - {conf}%", (max(0, x1), max(0, y1 - 20)), scale=0.9,
                                    thickness=1)
 
         # today = date.today()
         now = time.ctime(time.time())
-        text = f"{now}       Count = {count}"   # f string to join the variable of count
+        # f string to join the variable of count
+        text = f"{now}       Count = {count}"
         # display the count on the window output
-        cv2.putText(img, text, (20, 60), font, font_scale, (0, 0, 255), font_thickness, cv2.LINE_AA)
+        cv2.putText(img, text, (20, 60), font, font_scale,
+                    (0, 0, 255), font_thickness, cv2.LINE_AA)
 
     cv2.imshow("Person Detecting...", img)  # heading of the output window
 
