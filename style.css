@@ -1,0 +1,43 @@
+*{
+    margin-top:0;
+    padding:0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.st-emotion-cache-10oheav {
+    margin: 0;
+    padding: 1rem;
+}
+.st-emotion-cache-1y4p8pa{
+    padding: 2rem;
+}
+
+li{
+    font-weight: bold;
+}
+
+.st-emotion-cache-183lzff{
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    font-size:medium;
+    white-space:unset;
+}
+.st-emotion-cache-1y4p8pa{
+    width: 70%;
+    max-width: none;
+}
+.e1nzilvr1{
+    margin-top: 2rem;
+}
+
+p{
+    font-size: large;
+}
+#StyledLinkIconContainer{
+    height: 0;
+}
+
+#metro-coach-occupancy-status{
+    padding-top:0;
+}
